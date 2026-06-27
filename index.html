@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervfx — Вся полезная информация обо мне</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #140022, #220000, #001b22);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #774600, #770800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a0a0b0;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 260px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.6),
+                        0 0 40px rgba(99, 102, 241, 0.3);
+            border-color: rgba(168, 85, 247, 0.7);
+            background: rgba(168, 85, 247, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .btn.discord:hover {
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.7),
+                        0 0 40px rgba(88, 101, 242, 0.3);
+            border-color: #5865F2;
+            background: rgba(88, 101, 242, 0.15);
+        }
+
+        .btn.telegram:hover {
+            box-shadow: 0 0 20px rgba(38, 165, 224, 0.7),
+                        0 0 40px rgba(38, 165, 224, 0.3);
+            border-color: #26A5E0;
+            background: rgba(38, 165, 224, 0.15);
+        }
+
+        .btn.steam:hover {
+            box-shadow: 0 0 20px rgba(102, 104, 244, 0.7),
+                        0 0 40px rgba(102, 192, 244, 0.3);
+            border-color: #17319b;
+            background: rgba(102, 192, 244, 0.15);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #6b6b7b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Intervfx</h1>
+        <p class="subtitle">Вся полезная информация обо мне</p>
+
+        <div class="buttons">
+            <a href="https://discord.com/users/inter.vfx" class="btn discord" target="_blank">Discord</a>
+            <a href="https://t.me/intervfx" class="btn telegram" target="_blank">Telegram</a>
+            <a href="https://steamcommunity.com/profiles/76561198772538929/" class="btn steam" target="_blank">Steam</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 intervfx. Все права защищены организацией WM.
+    </footer>
+</body>
+</html>
